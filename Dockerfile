@@ -13,8 +13,8 @@ RUN rustup toolchain install stable-x86_64-unknown-linux-gnu
 
 RUN git clone https://github.com/est31/msvc-wine-rust.git
 WORKDIR /msvc-wine-rust
-RUN chmod +x run.sh
-RUN ./run.sh licenses-accepted
+RUN chmod +x get.sh
+RUN ./get.sh licenses-accepted
 
 RUN echo [target.x86_64-pc-windows-msvc] > /usr/local/cargo/config.toml
 RUN echo linker = "/msvc-wine-rust/linker-scripts/linkx64.sh" >> /usr/local/cargo/config.toml
