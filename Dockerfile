@@ -16,6 +16,8 @@ WORKDIR /
 RUN git clone https://github.com/est31/msvc-wine-rust.git
 WORKDIR /msvc-wine-rust
 RUN chmod +x get.sh
+# it seems like the second call will not download an important file, so we'll call this script twice
+RUN ./get.sh
 RUN ./get.sh licenses-accepted
 
 RUN echo [target.x86_64-pc-windows-msvc] > /usr/local/cargo/config.toml
