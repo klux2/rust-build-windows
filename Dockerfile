@@ -8,7 +8,7 @@ RUN apt-get -y dist-upgrade
 RUN apt-get -y install mingw-w64 wine64-development p7zip-full msitools
 RUN rustup update
 RUN rustup target add x86_64-unknown-linux-gnu
-RUN rustup target add x86_64-pc-windows-gnu
+RUN rustup target add x86_64-pc-windows-msvc
 RUN rustup toolchain install stable-x86_64-unknown-linux-gnu
 
 # see https://gist.github.com/est31/7235ab253554d33046873dfb64e7ecdc
