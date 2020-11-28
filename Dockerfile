@@ -21,3 +21,5 @@ RUN ./get.sh; ./get.sh licenses-accepted
 
 RUN echo [target.x86_64-pc-windows-msvc] > /usr/local/cargo/config.toml
 RUN echo linker = "/msvc-wine-rust/linker-scripts/linkx64.sh" >> /usr/local/cargo/config.toml
+
+WORKDIR /
