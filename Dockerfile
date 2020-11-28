@@ -12,6 +12,7 @@ RUN rustup target add x86_64-pc-windows-gnu
 RUN rustup toolchain install stable-x86_64-unknown-linux-gnu
 
 # see https://gist.github.com/est31/7235ab253554d33046873dfb64e7ecdc
+WORKDIR /
 RUN git clone https://github.com/est31/msvc-wine-rust.git
 WORKDIR /msvc-wine-rust
 RUN chmod +x get.sh
